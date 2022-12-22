@@ -3,7 +3,7 @@
     <Shell>
     <App>
         <pages>
-            <Page id="page" title="{i18n>title} ---View1---">
+            <Page id="page" title="{i18n>title} --View1--">
                     <content>
                     <mvc:XMLView viewName="es.victor.cero.view.HelloPanel"/>
                     <mvc:XMLView viewName="es.victor.cero.view.InvoiceList"/>
