@@ -1,7 +1,14 @@
-<mvc:View controllerName="es.victor.cero.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+<mvc:View controllerName="es.victor.cero.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Shell>
+    <App>
+        <pages>
+            <Page id="page" title="{i18n>title}">
+                    <content>
+                    <mvc:XMLView viewName="es.victor.cero.view.HelloPanel"/>
+                    <mvc:XMLView viewName="es.victor.cero.view.InvoiceList"/>
+                    </content>
+            </Page>
+        </pages>
+    </App>
+    </Shell>
 </mvc:View>

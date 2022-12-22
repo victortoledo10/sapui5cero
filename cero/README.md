@@ -40,3 +40,6 @@ cero
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+https://sapui5.hana.ondemand.com/#/topic/df86bfbeab0645e5b764ffa488ed57dc
+
+

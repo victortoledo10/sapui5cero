@@ -17,7 +17,7 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /V3
-            url: https://services.odata.org 
+            url: https://services.odata.org  #ODAta
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

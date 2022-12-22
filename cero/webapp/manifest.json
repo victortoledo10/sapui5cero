@@ -15,7 +15,7 @@
       "version": "1.8.4",
       "toolsId": "2a8c898c-5001-453d-999c-c793c963df83"
     },
-    "dataSources": {
+    "dataSources": { 
       "mainService": {
         "uri": "/V3/Northwind/Northwind.svc/",
         "type": "OData",
@@ -73,7 +73,14 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
-      }
+      },
+        "invoice2": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+        },
+        "invoice": {
+          "dataSource": "mainService"
+        }
     },
     "resources": {
       "css": [
