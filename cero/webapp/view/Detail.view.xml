@@ -1,0 +1,13 @@
+<mvc:View
+	xmlns="sap.m"
+	controllerName="es.victor.cero.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page	
+	    showNavButton="true"
+		navButtonPress=".onNavBack"
+		title="{i18n>detailPageTitle}">
+		<ObjectHeader
+			intro="{invoice>ShipperName}"
+			title="{invoice>ProductName}"/>
+	</Page>
+</mvc:View>
