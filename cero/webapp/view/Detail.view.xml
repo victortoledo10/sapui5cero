@@ -7,7 +7,74 @@
 		navButtonPress=".onNavBack"
 		title="{i18n>detailPageTitle}">
 		<ObjectHeader
-			intro="{invoice>ShipperName}"
-			title="{invoice>ProductName}"/>
+			intro="{modelo2>/unmodelo/name}{invoice>ShipperName}"
+			title="{invoice>ShipName}" />
+
+    
+      <Table
+                id="lineItemsList"
+                width="auto"
+
+                
+                items="{
+                        path : '/Order_Details' }" 
+
+                updateFinished=".onListUpdateFinished"
+                noDataText="{i18n>detailLineItemTableNoDataText}"
+                busyIndicatorDelay="{detailView>/lineItemTableDelay}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title
+                            id="lineItemsTitle"
+                            text="{detailView>/lineItemListTitle}"
+                            titleStyle="H3"
+                            level="H3"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="{i18n>detailLineItemTableIDColumn}"/>
+                    </Column>
+
+                <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true">
+                        <Text text="Producto" />
+                </Column>
+                <Column
+                        minScreenWidth="Desktop"
+                        demandPopin="true"
+                        hAlign="End">
+                        <Text text="Precio" />
+			    </Column>
+
+                    <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                        hAlign="End">
+                        <Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectIdentifier
+                                title="{invoice>OrderID}"
+                                text="{invoice>OrderID}"/>
+                            <Text text="{invoice>ProductID} {>/Product/ProductName} como sacar el nombre "/>
+                            <Text text="{Quantity} x {UnitPrice}" />
+                            <ObjectNumber
+                                number="{
+                                    path: 'UnitPrice',
+                                    formatter: '.formatter.currencyValue'
+                                }"
+                                unit="{UnitPrice}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+
+
 	</Page>
 </mvc:View>
